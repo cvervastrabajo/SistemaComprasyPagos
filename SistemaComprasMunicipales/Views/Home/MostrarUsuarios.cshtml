@@ -1,0 +1,116 @@
+﻿@model IEnumerable<CapaDeDatos.Entidades.Usuarios>
+
+@{
+    ViewData["Title"] = "Mostrar Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="app-main__outer">
+    <div class="app-main__inner">
+        <div class="app-page-title">
+            <div class="page-title-wrapper">
+                <div class="page-title-heading">
+                    <div class="page-title-icon">
+                        <i class="pe-7s-display2 icon-gradient bg-warm-flame"></i>
+                    </div>
+                    <div>
+                        Usurios
+                        <div class="page-title-subheading">
+                            Listado de Usurios.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <p>
+                <a asp-action="Create">Create New</a>
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usu_rut)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usu_rut_dv)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usu_nombre)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usu_email)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usu_telefono)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usu_clave)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usu_vigente)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usu_reseteada)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usu_sa)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usu_sigla)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Usu_cargo)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usu_rut)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usu_rut_dv)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usu_nombre)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usu_email)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usu_telefono)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usu_clave)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usu_vigente)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usu_reseteada)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usu_sa)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usu_sigla)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Usu_cargo)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>  

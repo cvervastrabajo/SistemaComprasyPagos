@@ -1,0 +1,23 @@
+# Ignorar la carpeta .vs generada por Visual Studio
+.vs/
+
+# Ignorar archivos de compilación
+*.obj
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
+
+# Ignorar otros archivos temporales de Visual Studio
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Ignorar la carpeta de paquetes de NuGet
+packages/
+
+# Ignorar bin y obj (carpetas de compilación)
+bin/
+obj/
